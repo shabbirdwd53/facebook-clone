@@ -1,10 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import { HiOutlineVideoCamera } from "react-icons/hi";
+import { IoMdPhotos } from "react-icons/io";
+import { BsEmojiSmile } from "react-icons/bs";
 
 const CreatePost = () => {
   return (
-    <div className="bg-white rounded-md shadow-md text-gray-500 p-2">
+    <div className="bg-white rounded-md shadow-md text-gray-500 p-2 divide-y">
       <div className="flex p-4 space-x-2 items-center">
         <Image
           src="https://avatars.dicebear.com/api/open-peeps/:seed.svg"
@@ -17,13 +19,22 @@ const CreatePost = () => {
           <input
             className="rounded-full h-12 flex-grow focus:outline-none font-medium bg-gray-100 px-4"
             type="text"
-            placeholder={`What's on your mind, Shabbir Dawoodi?`}></input>
+            placeholder={`What's on your mind, Shabbir Dawoodi?`}
+          ></input>
         </form>
       </div>
-      <div className="flex justify-evenly">
-        <div className="flex items-center">
-          <HiOutlineVideoCamera className="h-8 w-8 text-gray-500" />
+      <div className="flex justify-evenly pt-4">
+        <div className="flex items-center space-x-1 flex-grow justify-center hover:cursor-pointer hover:bg-gray-100 rounded-md">
+          <HiOutlineVideoCamera className="text-red-500"  size={20}/>
           <p>Live</p>
+        </div>
+        <div className="flex items-center space-x-1 flex-grow justify-center hover:cursor-pointer hover:bg-gray-100 rounded-md">
+          <IoMdPhotos className="text-green-500"  size={20}/>
+          <p>Photo/Video</p>
+        </div>
+        <div className="flex items-center space-x-1 flex-grow justify-center hover:cursor-pointer hover:bg-gray-100 rounded-md">
+          <BsEmojiSmile className="text-yellow-400" size={20}/>
+          <p>Feeling/Activity</p>
         </div>
       </div>
     </div>
