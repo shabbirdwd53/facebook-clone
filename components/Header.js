@@ -9,7 +9,7 @@ import { useState } from "react";
 
 const Header = () => {
   return (
-    <div className="sticky flex h-16 bg-white items-center p-2 shadow-md top-0">
+    <div className="sticky z-50 flex h-16 bg-white items-center p-2 shadow-md top-0">
       {/* Left */}
       <div className="flex min-w-fit">
         <Image

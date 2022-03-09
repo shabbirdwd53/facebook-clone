@@ -16,7 +16,7 @@ export default function Home() {
         {/* Left Sidebar */}
         <Sidebar />
 
-        {/* POsts */}
+        {/* Feed */}
         <Feed />
         {/* Right Sidebar */}
         <RightSidebar />
