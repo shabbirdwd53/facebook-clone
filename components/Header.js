@@ -17,7 +17,7 @@ const Header = () => {
           height={40}
           width={40}
         />
-        <div className="flex items-center space-x-2 px-2 ml-2 rounded-full bg-gray-200 text-gray-500">
+        <div className="flex items-center space-x-2 px-2 ml-2 rounded-full bg-gray-100 text-gray-500">
           <HiOutlineSearch className="" size={20} />
           <input
             className="hidden lg:inline-flex bg-transparent focus:outline-none outline-none flex-shrink"
@@ -63,8 +63,8 @@ const Header = () => {
           width={40}
           className="rounded-full cursor-pointer"
         />
-        <p className="hidden xl:inline-flex font-normal whitespace-nowrap p-3 max-w-xs">
-          Shabbir Dawoodi
+        <p className="hidden xl:inline-flex font-semibold text-sm whitespace-nowrap p-3 max-w-xs">
+          Shabbir
         </p>
         <CgMenuGridO
           size={20}

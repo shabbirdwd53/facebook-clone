@@ -23,18 +23,18 @@ const CreatePost = () => {
           ></input>
         </form>
       </div>
-      <div className="flex justify-evenly pt-4">
-        <div className="flex items-center space-x-1 flex-grow justify-center hover:cursor-pointer hover:bg-gray-100 rounded-md">
-          <HiOutlineVideoCamera className="text-red-500"  size={20}/>
-          <p>Live</p>
+      <div className="flex justify-evenly py-2">
+        <div className="flex items-center p-1 space-x-1 flex-grow justify-center hover:cursor-pointer hover:bg-gray-100 rounded-md">
+          <HiOutlineVideoCamera className="text-red-500" size={20} />
+          <p className="font-semibold text-gray-600">Live Video</p>
         </div>
-        <div className="flex items-center space-x-1 flex-grow justify-center hover:cursor-pointer hover:bg-gray-100 rounded-md">
-          <IoMdPhotos className="text-green-500"  size={20}/>
-          <p>Photo/Video</p>
+        <div className="flex items-center p-1 space-x-1 flex-grow justify-center hover:cursor-pointer hover:bg-gray-100 rounded-md">
+          <IoMdPhotos className="text-green-500" size={20} />
+          <p className="font-semibold text-gray-600">Photo/Video</p>
         </div>
-        <div className="flex items-center space-x-1 flex-grow justify-center hover:cursor-pointer hover:bg-gray-100 rounded-md">
-          <BsEmojiSmile className="text-yellow-400" size={20}/>
-          <p>Feeling/Activity</p>
+        <div className="flex items-center p-1 space-x-1 flex-grow justify-center hover:cursor-pointer hover:bg-gray-100 rounded-md">
+          <BsEmojiSmile className="text-yellow-400" size={20} />
+          <p className="font-semibold text-gray-600">Feeling/Activity</p>
         </div>
       </div>
     </div>

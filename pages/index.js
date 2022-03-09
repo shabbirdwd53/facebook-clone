@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Feed from "../components/Feed";
 import Header from "../components/Header";
+import RightSidebar from "../components/RightSidebar";
 import Sidebar from "../components/Sidebar";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         {/* POsts */}
         <Feed />
         {/* Right Sidebar */}
+        <RightSidebar />
       </main>
     </div>
   );
