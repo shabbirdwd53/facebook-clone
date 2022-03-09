@@ -2,12 +2,30 @@ import React from "react";
 import Sidebaritem from "./Sidebaritem";
 import { ImUsers } from "react-icons/im";
 import { MdGroups } from "react-icons/md";
+import { AiOutlineShop } from "react-icons/ai";
+import { MdOutlineOndemandVideo, MdOutlineExpandMore } from "react-icons/md";
+import { BsStopwatch } from "react-icons/bs";
+import Image from "next/image";
 
 const Sidebar = () => {
   return (
-    <div className="py-2 pl-2 max-w-xl xl:min-w-[320px] bg-blue-300">
+    <div className="hidden lg:inline-flex flex-col py-2 pl-2 max-w-xl lg:min-w-[320px]">
+      <div className="flex items-center space-x-2 py-3 pl-4  hover:bg-gray-200 rounded-l-xl cursor-pointer ">
+        <Image
+          src="https://avatars.dicebear.com/api/open-peeps/:seed.svg"
+          height={40}
+          s
+          width={40}
+          className="rounded-full cursor-pointer"
+        />
+        <p className="hidden sm:inline-flex font-medium">Shabbir Dawoodi</p>
+      </div>
       <Sidebaritem Icon={ImUsers} value="Friends" />
-      <Sidebaritem Icon={ImUsers} value="Friends" />
+      <Sidebaritem Icon={MdGroups} value="Groups" />
+      <Sidebaritem Icon={AiOutlineShop} value="MarketPlace" />
+      <Sidebaritem Icon={MdOutlineOndemandVideo} value="Watch" />
+      <Sidebaritem Icon={BsStopwatch} value="Memeries" />
+      <Sidebaritem Icon={MdOutlineExpandMore} value="See more" />
     </div>
   );
 };
