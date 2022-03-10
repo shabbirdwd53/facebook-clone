@@ -5,6 +5,7 @@ const Posts = () => {
   return (
     <div>
       <Post />
+      <Post />
     </div>
   );
 };
