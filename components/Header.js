@@ -6,8 +6,10 @@ import { MdOutlineExpandMore, MdOutlineOndemandVideo } from "react-icons/md";
 import { RiFlag2Line } from "react-icons/ri";
 import { IoGameControllerOutline } from "react-icons/io5";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 
 const Header = () => {
+  const { data: session, status } = useSession();
   return (
     <div className="sticky z-50 flex h-16 bg-white items-center p-2 shadow-md top-0">
       {/* Left */}
@@ -57,14 +59,14 @@ const Header = () => {
       {/* Right */}
       <div className="flex items-center space-x-2 justify-end min-w-fit">
         <Image
-          src="https://avatars.dicebear.com/api/open-peeps/:seed.svg"
+          src={session.user.image}
           height={40}
           s
           width={40}
           className="rounded-full cursor-pointer"
         />
         <p className="hidden xl:inline-flex font-semibold text-sm whitespace-nowrap p-3 max-w-xs">
-          Shabbir
+          {session?.user.name.split(" ")[0]}
         </p>
         <CgMenuGridO
           size={20}
