@@ -16,7 +16,6 @@ const Sidebar = () => {
         <Image
           src={session?.user.image}
           height={40}
-          s
           width={40}
           className="rounded-full cursor-pointer"
         />

@@ -2,6 +2,7 @@ import React from "react";
 import { BiSearch } from "react-icons/bi";
 import { RiVideoAddFill } from "react-icons/ri";
 import { CgMoreAlt } from "react-icons/cg";
+import Contacts from "./Contacts";
 
 const RightSidebar = () => {
   return (
@@ -20,6 +21,21 @@ const RightSidebar = () => {
           </div>
         </div>
       </div>
+      <Contacts
+        name="Shabbir Dawoodi"
+        src="https://images.pexels.com/photos/3845457/pexels-photo-3845457.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+        status="online"
+      />
+      <Contacts
+        name="Shabbir Dawoodi"
+        src="https://images.pexels.com/photos/3845457/pexels-photo-3845457.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+        status="offline"
+      />
+      <Contacts
+        name="Shabbir Dawoodi"
+        src="https://images.pexels.com/photos/3845457/pexels-photo-3845457.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+        status="online"
+      />
     </div>
   );
 };

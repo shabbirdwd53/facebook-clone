@@ -7,7 +7,7 @@ import { RiShareForwardLine } from "react-icons/ri";
 const Post = ({ post }) => {
   return (
     <div className="flex flex-col" key={post.id}>
-      <div className="bg-white mt-6 rounded-md shadow-sm p-4">
+      <div className="bg-white mt-6 rounded-md p-4">
         <div className="flex items-center space-x-2">
           <img
             src="https://images.pexels.com/photos/3845457/pexels-photo-3845457.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"

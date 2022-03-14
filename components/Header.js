@@ -5,7 +5,7 @@ import { AiFillMessage, AiFillBell, AiOutlineShop } from "react-icons/ai";
 import { MdOutlineExpandMore, MdOutlineOndemandVideo } from "react-icons/md";
 import { RiFlag2Line } from "react-icons/ri";
 import { IoGameControllerOutline } from "react-icons/io5";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 
 const Header = () => {
   const { data: session, status } = useSession();
@@ -31,8 +31,8 @@ const Header = () => {
       {/* Center */}
       <div className="flex flex-grow justify-center mx-2">
         <div className="flex items-center">
-          <div className="flex items-center h-14 px-4 md:px-10 rounded-md md:hover:bg-gray-100 cursor-pointer ">
-            <HiOutlineHome className="mx-auto text-gray-500" size={25} />
+          <div className="flex items-center  h-14 px-4 md:px-10 rounded-md md:hover:bg-gray-100 cursor-pointer ">
+            <HiOutlineHome className="mx-auto text-blue-500" size={25} />
           </div>
           <div className="flex items-center h-14 px-4 md:px-10 rounded-md md:hover:bg-gray-100 cursor-pointer ">
             <RiFlag2Line className="mx-auto text-gray-500" size={25} />
@@ -60,8 +60,8 @@ const Header = () => {
         <Image
           src={session?.user.image}
           height={40}
-          s
           width={40}
+          onClick={signOut}
           className="rounded-full cursor-pointer"
         />
         <p className="hidden xl:inline-flex font-semibold text-sm whitespace-nowrap p-3 max-w-xs">
