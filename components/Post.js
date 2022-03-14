@@ -9,10 +9,7 @@ const Post = ({ post }) => {
     <div className="flex flex-col" key={post.id}>
       <div className="bg-white mt-6 rounded-md p-4">
         <div className="flex items-center space-x-2">
-          <img
-            src="https://images.pexels.com/photos/3845457/pexels-photo-3845457.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            className="rounded-full w-10 h-10"
-          />
+          <img src={post.profilePic} className="rounded-full w-10 h-10" />
           <div>
             <p className="font-medium">{post.name}</p>
             <p className="text-xs text-gray-500">{post.timeStamp}</p>

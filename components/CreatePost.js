@@ -31,6 +31,7 @@ const CreatePost = () => {
     formData.append("post", inputRef.current.value);
     formData.append("name", session?.user.name);
     formData.append("email", session?.user.email);
+    formData.append("profilePic", session?.user.image);
 
     axios
       .post(FACEBOOK_CLONE_ENDPOINT, formData, {
@@ -103,6 +104,7 @@ const CreatePost = () => {
             ref={hiddenFileInput}
             onChange={addImageToPost}
             type="file"
+            accept="image/*"
             hidden
           />
         </div>

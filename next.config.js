@@ -7,6 +7,7 @@ const nextConfig = {
       "avatars.dicebear.com",
       "images.pexels.com",
       "platform-lookaside.fbsbx.com",
+      "static.xx.fbcdn.net",
     ],
   },
 };
