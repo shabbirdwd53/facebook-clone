@@ -12,10 +12,10 @@ const Contacts = ({ name, src, status }) => {
       />
       <p className="hidden sm:inline-flex text-sm">{name}</p>
       {status === "online" && (
-        <div className="bg-green-500 h-3 w-3 rounded-full absolute left-6 bottom-2 border-2"></div>
+        <div className="bg-green-500 h-4 w-4 rounded-full absolute left-5 bottom-2 border-2"></div>
       )}
       {status === "offline" && (
-        <div className="bg-gray-500 h-3 w-3 rounded-full absolute left-6 bottom-2 border-2"></div>
+        <div className="bg-gray-500 h-4 w-4 rounded-full absolute left-5 bottom-2 border-2"></div>
       )}
     </div>
   );
