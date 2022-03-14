@@ -6,10 +6,13 @@ import { BsEmojiSmile } from "react-icons/bs";
 import { useSession } from "next-auth/react";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import axios from "axios";
+import { addPost, selectPost } from "../public/src/features/postSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const CreatePost = () => {
   const FACEBOOK_CLONE_ENDPOINT = "http://localhost:8080/api/v1/post";
   const { data: session, status } = useSession();
+  const dispatch = useDispatch();
   const inputRef = useRef(null);
   const hiddenFileInput = useRef(null);
   const [imageToPost, setImageToPost] = useState(null);
@@ -24,6 +27,7 @@ const CreatePost = () => {
     const formData = new FormData();
 
     formData.append("file", imageToPost);
+    console.log("imagetopost: " + imageToPost);
     formData.append("post", inputRef.current.value);
     formData.append("name", session?.user.name);
     formData.append("email", session?.user.email);
@@ -34,8 +38,9 @@ const CreatePost = () => {
       })
       .then((response) => {
         inputRef.current.value = "";
+        dispatch(addPost(response.data));
+        console.log(response.data);
         removeImage();
-        console.log(response);
       })
       .catch((error) => {
         console.log(error);

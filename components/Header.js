@@ -5,7 +5,6 @@ import { AiFillMessage, AiFillBell, AiOutlineShop } from "react-icons/ai";
 import { MdOutlineExpandMore, MdOutlineOndemandVideo } from "react-icons/md";
 import { RiFlag2Line } from "react-icons/ri";
 import { IoGameControllerOutline } from "react-icons/io5";
-import { useState } from "react";
 import { useSession } from "next-auth/react";
 
 const Header = () => {
@@ -20,7 +19,7 @@ const Header = () => {
           width={40}
         />
         <div className="flex items-center space-x-2 px-2 ml-2 rounded-full bg-gray-100 text-gray-500">
-          <HiOutlineSearch className="" size={20} />
+          <HiOutlineSearch size={20} />
           <input
             className="hidden lg:inline-flex bg-transparent focus:outline-none outline-none flex-shrink"
             type="text"
@@ -59,7 +58,7 @@ const Header = () => {
       {/* Right */}
       <div className="flex items-center space-x-2 justify-end min-w-fit">
         <Image
-          src={session.user.image}
+          src={session?.user.image}
           height={40}
           s
           width={40}
