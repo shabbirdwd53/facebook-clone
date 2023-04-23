@@ -12,7 +12,10 @@ export const postSlice = createSlice({
     },
     addAllPost: (state, action) => {
       console.log("AddPost Action");
-      state.value.push(...action.payload);
+//       state.value.push(...action.payload);
+//       pervious line is not working because when we adding post the same post is coming 2 times. I fixed the issue.
+      state.value = (action.payload);
+      
     },
   },
 });
